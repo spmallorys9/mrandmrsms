@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=Nunito:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Nunito', sans-serif;
+
+  /* Pastel ice cream palette */
+  --color-cream:       #FFF0F5;
+  --color-pink:        #F9A8C9;
+  --color-pink-dark:   #E87DAE;
+  --color-pink-light:  #FDE2EF;
+  --color-blue:        #A8D8EA;
+  --color-blue-dark:   #75BADA;
+  --color-blue-light:  #D6EEF8;
+  --color-lavender:    #C9B8E8;
+  --color-mint:        #B5EAD7;
+  --color-peach:       #FDDBB4;
+  --color-text:        #4A3060;
+  --color-text-soft:   #7B5EA7;
+  --color-white:       #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #FFF0F5;
+  color: #4A3060;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+/* Waffle cone texture strip — repeating diagonal */
+.waffle-bg {
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(249,168,201,0.18) 0px,
+      rgba(249,168,201,0.18) 2px,
+      transparent 2px,
+      transparent 14px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(168,216,234,0.18) 0px,
+      rgba(168,216,234,0.18) 2px,
+      transparent 2px,
+      transparent 14px
+    );
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #F9A8C944; border-radius: 3px; }
