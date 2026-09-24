@@ -302,11 +302,16 @@ function BookingSection() {
     return e
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length) { setErrors(errs); return }
-    setSubmitted(true)
+    const res = await fetch('https://formspree.io/f/xbglkzpo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(form),
+    })
+    if (res.ok) setSubmitted(true)
   }
 
   const inputClass = (err?: string) =>
@@ -433,11 +438,16 @@ function ContactSection() {
     return e
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length) { setErrors(errs); return }
-    setSubmitted(true)
+    const res = await fetch('https://formspree.io/f/xbglkzpo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(form),
+    })
+    if (res.ok) setSubmitted(true)
   }
 
   const inputClass = (err?: string) =>
